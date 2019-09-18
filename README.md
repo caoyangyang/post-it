@@ -60,9 +60,20 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## add jenkins file by plugin
+```
+npm install one-awesome-command -g
+one-awesome-command add jenkins
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```
+
+## build docker image and run
+```
+docker build . -f docker/Dockerfile -t 'yangyangcao/post-it':latest --rm
+docker run --name post-it -d -p 3000:3000 yangyangcao/post-it:latest
+
+```
+
 
 ## Stay in touch
 
