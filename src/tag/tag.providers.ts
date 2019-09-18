@@ -1,5 +1,5 @@
 import { Connection } from 'mongoose';
-import { TagSchema } from '../schema/tag.schema';
+import { TagSchema } from './schema/tag.schema';
 
 export const tagProviders = [
     {
