@@ -8,8 +8,9 @@ export class TagService {
     constructor(@Inject('TAG_MODEL') private readonly tagModel: Model<Tag>) {}
 
     async create(createTagDto: CreateTagDto): Promise<Tag> {
-        const createdCat = new this.tagModel(createTagDto);
-        return await createdCat.save();
+        const createdTag = new this.tagModel(createTagDto);
+        createdTag.createDate = new Date();
+        return await createdTag.save();
     }
 
     async findAll(): Promise<Tag[]> {
