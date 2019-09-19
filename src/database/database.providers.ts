@@ -5,8 +5,7 @@ export const databaseProviders = [
     {
         provide: 'DATABASE_CONNECTION',
         useFactory: async (configService: ConfigService): Promise<typeof mongoose> =>{
-            const mongodburl = configService.get('MONGODB_URL');
-            return await mongoose.connect('mongodb://127.0.0.1:27017/post-it');
+            return await mongoose.connect(configService.get('MONGODB_URL'));
         },
         inject: ['ConfigService'],
     },
