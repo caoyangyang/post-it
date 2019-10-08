@@ -1,6 +1,6 @@
-export interface Tag extends Document {
+export interface Tag {
     name: string;
-    description: string;
+    description?: string;
     createDate: Date;
     rgbColor: string;
 }
